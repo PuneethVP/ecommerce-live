@@ -1,0 +1,17 @@
+{% extends "store/main.html" %}
+{% load bootstrap4 %}
+{% block content %}
+<script>
+  signup=document.querySelector("#signup");
+  signup.classList.add("active");
+</script>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form method="post">
+      {% csrf_token %}
+      {%bootstrap_form form %}
+      <input type="submit" class="btn btn-success" name="" value="SignUp">
+    </form>
+  </div>
+
+{% endblock content %}

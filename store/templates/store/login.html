@@ -1,0 +1,21 @@
+{% extends "store/main.html" %}
+{% load bootstrap4 %}
+{% block content %}
+<script>
+  carticon=document.querySelector("#cart-icon");
+  carticon.style.visibility="hidden";
+  carttotal=document.querySelector("#cart-total");
+  carttotal.style.visibility="hidden";
+  login=document.querySelector("#login");
+  login.classList.add("active");
+</script>
+  <div class="container">
+    <h1>Log In</h1>
+    <form method="post">
+      {% csrf_token %}
+      {%bootstrap_form form %}
+      <input type="submit" class="btn btn-success" name="" value="Login">
+    </form>
+  </div>
+
+{% endblock content %}
